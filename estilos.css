@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background: #F5F6CE;
+}
+
+.slider {
+    width: 700px;
+    height: 360px;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.slider ul{
+    width: 400%;
+    height: 300px;
+    display: flex;
+    list-style: none;
+    transition: all 0.9s;
+}
+
+li img{
+    width: 700px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label{
+    display: block;
+    width: 25%;
+    height: 60px;
+    cursor: pointer;
+}
+
+#sbutton1 + label{
+    background: url(1.jpeg);
+    background-size: 100% 100%;
+}
+
+#sbutton2 + label{
+    background: url(2.jpeg);
+    background-size: 100% 100%;
+}
+
+#sbutton3 + label{
+    background: url(3.jpeg);
+    background-size: 100% 100%;
+}
+
+#sbutton4 + label{
+    background: url(4.jpeg);
+    background-size: 100% 100%;
+}
+
+#sbutton1:checked ~ ul {
+    margin-left: 0;
+}
+
+#sbutton2:checked ~ ul {
+    margin-left: -100%;
+}
+
+#sbutton3:checked ~ ul {
+    margin-left: -200%;
+}
+
+#sbutton4:checked ~ ul {
+    margin-left: -300%;
+}
